@@ -39,3 +39,6 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
+### 'Working of my Project'
+This React component, `LoanForm`, renders a loan application form using `@rjsf/core` (React JSON Schema Form). It validates user input with `ajv-errors` and `ajv` (a JSON Schema validator). When the form is submitted, the entered data is logged to the console and displayed in an alert message. The form structure is defined in an imported JSON schema (`loanSchema.json`). The component is styled with a simple layout to center the form on the page.
+
