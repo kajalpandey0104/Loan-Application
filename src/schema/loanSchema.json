@@ -1,0 +1,41 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Loan Application",
+    "type": "object",
+    "properties": {
+      "businessDetails": {
+        "title": "Business Details",
+        "type": "object",
+        "properties": {
+          "businessName": {
+            "type": "string",
+            "title": "Business Name"
+          },
+          "gstin": {
+            "type": "string",
+            "title": "GSTIN",
+            "pattern": "^[0-9A-Z]{15}$",
+            "errorMessage": {
+              "pattern": "GSTIN must be a 15-character alphanumeric string (uppercase letters and numbers only)"
+            }
+          }
+        },
+        "required": ["businessName", "gstin"]
+      },
+      "loanDetails": {
+        "title": "Loan Details",
+        "type": "object",
+        "properties": {
+          "creditScore": {
+            "type": "number",
+            "title": "Credit Score"
+          },
+          "loanAmount": {
+            "type": "number",
+            "title": "Required Loan Amount"
+          }
+        },
+        "required": ["creditScore", "loanAmount"]
+      }
+    }
+}
